@@ -26,7 +26,7 @@ const WORK = {
   ],
 
   motion: [
-    { title: "3D Wedding Envelope Animation",    shape: "tall", youtube: "12pw4gR33Fs", portrait: true, tag: "3D · Blender", thumb: "assets/thumbnails/envelope-3d.webp", preview: "assets/video/envelope-3d-loop.mp4" },
+    { title: "3D Wedding Envelope Animation",    shape: "tall", youtube: "12pw4gR33Fs", portrait: true, tag: "3D · Blender", thumb: "assets/thumbnails/envelope-3d.webp" },
     { title: "3D Retail Display Rack Render",    shape: "tall", image: "assets/thumbnails/retail-rack-3d-full.webp", tag: "3D · Blender", thumb: "assets/thumbnails/retail-rack-3d.webp", light: true },
     { title: "Wedding Invite Product Promo",     shape: "tall", youtube: "rB-D8zLevVU", portrait: true, tag: "Motion", thumb: "assets/thumbnails/wedding-invite-promo.webp" },
     { title: "SaaS Product Explainer",           shape: "tall", youtube: "yWb1O6ejut4", portrait: true, tag: "Motion", thumb: "assets/thumbnails/saas-explainer.webp" },
