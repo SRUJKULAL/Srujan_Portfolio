@@ -496,6 +496,23 @@ a {
   width: var(--wide-w);
 }
 
+/* In a row that mixes tall and wide cards, wide cards match the tall
+   cards' height so the row lines up (desktop only; on phones the wide
+   card would be wider than the screen) */
+
+@media (min-width: 901px) {
+
+  .scroll-row:has(.tall) .video-card.wide .card-media {
+    width: auto;
+    height: var(--tall-h);
+  }
+
+  .scroll-row:has(.tall) .video-card.wide h3 {
+    width: calc(var(--tall-h) * 16 / 9);
+  }
+
+}
+
 /* VIEW MORE CARD */
 
 .more-card .card-media {
