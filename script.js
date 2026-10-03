@@ -149,6 +149,31 @@ document.querySelectorAll("[data-row]").forEach(wrapper => {
 
 
 /* ------------------------------------------------------------------
+   HERO BACKGROUND
+   Fills 7 drifting columns with the portfolio thumbnails. Each column
+   holds its images twice so the loop is seamless.
+------------------------------------------------------------------- */
+
+const heroBg = document.getElementById("heroBg");
+
+if (heroBg) {
+  const thumbs = Object.values(WORK).flat()
+    .filter(item => item.thumb && !item.light && !item.thumb.startsWith("http"))
+    .map(item => item.thumb);
+
+  const COLS = 7, PER_COL = 4;
+  for (let c = 0; c < COLS; c++) {
+    const col = el("div", { class: "hero-col" });
+    col.style.setProperty("--dur", `${50 + (c % 3) * 12}s`);
+    const imgs = [];
+    for (let i = 0; i < PER_COL; i++) imgs.push(thumbs[(c * PER_COL + i) % thumbs.length]);
+    [...imgs, ...imgs].forEach(src => col.appendChild(el("img", { src, alt: "", decoding: "async" })));
+    heroBg.appendChild(col);
+  }
+}
+
+
+/* ------------------------------------------------------------------
    MODAL PLAYER
 ------------------------------------------------------------------- */
 
