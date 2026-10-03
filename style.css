@@ -480,7 +480,8 @@ a {
 /* title */
 
 .video-card h3 {
-  margin: 12px 2px 0;
+  margin: 12px 0 0;
+  text-align: center;
   max-width: 100%;
   font-size: 0.92rem;
   font-weight: 500;
