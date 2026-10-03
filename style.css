@@ -701,6 +701,13 @@ a {
   font-size: 0.95rem;
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
 .contact-links {
   display: flex;
   justify-content: center;
