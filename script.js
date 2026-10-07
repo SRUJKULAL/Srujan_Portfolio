@@ -144,6 +144,77 @@ function buildRow(wrapper, items) {
   window.addEventListener("resize", update);
   row.querySelectorAll("img").forEach(img => img.addEventListener("load", update));
   update();
+
+  if (wrapper.hasAttribute("data-autoscroll") && !reduceMotion) autoScroll(wrapper, row);
+}
+
+
+/* ------------------------------------------------------------------
+   AUTO-SCROLL
+   Rows marked data-autoscroll drift slowly sideways while they are on
+   screen, pause for a moment at each end and glide back. Hovering
+   pauses the drift (it resumes when the mouse leaves); the first touch
+   on a phone hands control to the visitor and stops it for good.
+------------------------------------------------------------------- */
+
+const autoScrollers = [];   // resume functions, called when the player closes
+let restoringFocus = false; // focus moving back to a card after the player closes
+
+function autoScroll(wrapper, row) {
+  const SPEED = 30;          // pixels per second
+  const END_PAUSE = 1500;    // ms to rest at each end
+
+  let visible = false, hovered = false, focused = false, stopped = false;
+  let dir = 1, pos = 0, last = 0, restUntil = 0, frame = 0;
+
+  const running = () => visible && !hovered && !focused && !stopped && modal.hidden;
+
+  const tick = now => {
+    frame = 0;
+    if (!running()) return;
+    const dt = last ? Math.min(now - last, 100) : 0;
+    last = now;
+
+    const max = row.scrollWidth - row.clientWidth;
+    if (max > 0 && now >= restUntil) {
+      pos += dir * SPEED * dt / 1000;
+      if (pos >= max) { pos = max; dir = -1; restUntil = now + END_PAUSE; }
+      if (pos <= 0)   { pos = 0;   dir = 1;  restUntil = now + END_PAUSE; }
+      row.scrollLeft = pos;
+    }
+    frame = requestAnimationFrame(tick);
+  };
+
+  const start = () => {
+    if (frame || !running()) return;
+    pos = row.scrollLeft;   // continue from wherever the visitor left it
+    last = 0;
+    wrapper.classList.add("auto-scrolling");
+    frame = requestAnimationFrame(tick);
+  };
+
+  const pause = () => {
+    cancelAnimationFrame(frame);
+    frame = 0;
+  };
+
+  new IntersectionObserver(([entry]) => {
+    visible = entry.isIntersecting;
+    visible ? start() : pause();
+  }, { threshold: 0.5 }).observe(row);
+
+  wrapper.addEventListener("mouseenter", () => { hovered = true; pause(); });
+  wrapper.addEventListener("mouseleave", () => { hovered = false; start(); });
+  wrapper.addEventListener("focusin", e => {
+    if (!restoringFocus && e.target.matches(":focus-visible")) { focused = true; pause(); }
+  });
+  wrapper.addEventListener("focusout", () => { focused = false; start(); });
+  autoScrollers.push(start);
+  row.addEventListener("touchstart", () => {
+    stopped = true;
+    pause();
+    wrapper.classList.remove("auto-scrolling");   // give card snapping back for swiping
+  }, { passive: true });
 }
 
 document.querySelectorAll("[data-row]").forEach(wrapper => {
@@ -220,7 +291,10 @@ function closeModal() {
   modal.hidden = true;
   container.innerHTML = "";
   document.body.style.overflow = "";
+  restoringFocus = true;
   if (lastTrigger) lastTrigger.focus();
+  restoringFocus = false;
+  autoScrollers.forEach(resume => resume());
 }
 
 closeBtn.addEventListener("click", closeModal);
