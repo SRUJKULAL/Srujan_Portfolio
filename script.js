@@ -5,6 +5,7 @@
    shape:    "tall" (9:16 card) or "wide" (16:9 card)
    youtube:  YouTube video ID   (youtube.com/shorts/<ID> or youtu.be/<ID>)
    vimeo:    Vimeo video ID
+   video:    path to a video file in this repo (for work not on YouTube/Vimeo)
    image:    full-size image to open instead of a video (for still renders)
    portrait: true if the video itself is vertical (Shorts / Reels)
    tag:      optional small label on the card, e.g. "3D · Blender"
@@ -28,6 +29,7 @@ const WORK = {
   motion: [
     { title: "3D Wedding Envelope Animation",    shape: "tall", youtube: "12pw4gR33Fs", portrait: true, tag: "3D · Blender", thumb: "assets/thumbnails/envelope-3d.webp" },
     { title: "3D Retail Display Rack Render",    shape: "tall", image: "assets/thumbnails/retail-rack-3d-full.webp", tag: "3D · Blender", thumb: "assets/thumbnails/retail-rack-3d.webp", light: true },
+    { title: "Ajjer – Short Film Motion Poster", shape: "tall", video: "assets/video/ajjer-motion-poster.mp4", portrait: true, tag: "Motion", thumb: "assets/thumbnails/ajjer-motion-poster.webp" },
     { title: "Wedding Invite Product Promo",     shape: "tall", youtube: "rB-D8zLevVU", portrait: true, tag: "Motion", thumb: "assets/thumbnails/wedding-invite-promo.webp" },
     { title: "SaaS Product Explainer",           shape: "tall", youtube: "yWb1O6ejut4", portrait: true, tag: "Motion", thumb: "assets/thumbnails/saas-explainer.webp" },
     { title: "Education Explainer Reel",         shape: "tall", youtube: "4_PDqbUO6xk", portrait: true, tag: "Motion", thumb: "assets/thumbnails/education-explainer.webp" },
@@ -191,6 +193,9 @@ function openModal(item, trigger) {
   container.innerHTML = "";
   if (item.image) {
     container.appendChild(el("img", { src: item.image, alt: item.title }));
+  } else if (item.video) {
+    const video = el("video", { src: item.video, poster: item.thumb, controls: "", autoplay: "", playsinline: "", title: item.title });
+    container.appendChild(video);
   } else {
     container.appendChild(el("iframe", {
       src,
