@@ -355,6 +355,12 @@ a {
   display: none;
 }
 
+/* snapping would pull the row back on every auto-scroll step */
+
+.scroll-wrapper.auto-scrolling .scroll-row {
+  scroll-snap-type: none;
+}
+
 /* edge fade, only while there is more to scroll */
 
 .scroll-wrapper::after {
