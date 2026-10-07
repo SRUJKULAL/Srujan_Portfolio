@@ -9,6 +9,7 @@
    image:    full-size image to open instead of a video (for still renders)
    portrait: true if the video itself is vertical (Shorts / Reels)
    tag:      optional small label on the card, e.g. "3D · Blender"
+   credit:   optional small line under the title, e.g. a director credit
    preview:  optional short muted .mp4 that loops on the card
 ------------------------------------------------------------------- */
 
@@ -29,7 +30,7 @@ const WORK = {
   motion: [
     { title: "3D Wedding Envelope Animation",    shape: "tall", youtube: "12pw4gR33Fs", portrait: true, tag: "3D · Blender", thumb: "assets/thumbnails/envelope-3d.webp" },
     { title: "3D Retail Display Rack Render",    shape: "tall", image: "assets/thumbnails/retail-rack-3d-full.webp", tag: "3D · Blender", thumb: "assets/thumbnails/retail-rack-3d.webp", light: true },
-    { title: "Ajjer – Short Film Motion Poster", shape: "tall", video: "assets/video/ajjer-motion-poster.mp4", portrait: true, tag: "Motion", thumb: "assets/thumbnails/ajjer-motion-poster.webp" },
+    { title: "Ajjer – Short Film Motion Poster", shape: "tall", video: "assets/video/ajjer-motion-poster.mp4", portrait: true, tag: "Motion", credit: "Directed by Pradeep Naik", thumb: "assets/thumbnails/ajjer-motion-poster.webp" },
     { title: "Wedding Invite Product Promo",     shape: "tall", youtube: "rB-D8zLevVU", portrait: true, tag: "Motion", thumb: "assets/thumbnails/wedding-invite-promo.webp" },
     { title: "SaaS Product Explainer",           shape: "tall", youtube: "yWb1O6ejut4", portrait: true, tag: "Motion", thumb: "assets/thumbnails/saas-explainer.webp" },
     { title: "Education Explainer Reel",         shape: "tall", youtube: "4_PDqbUO6xk", portrait: true, tag: "Motion", thumb: "assets/thumbnails/education-explainer.webp" },
@@ -110,8 +111,8 @@ function buildCard(item) {
   const card = el("button", {
     class: `video-card ${item.shape}`,
     type: "button",
-    "aria-label": `${item.image ? "View" : "Play"}: ${item.title}`
-  }, [media, el("h3", { text: item.title })]);
+    "aria-label": `${item.image ? "View" : "Play"}: ${item.title}${item.credit ? `, ${item.credit}` : ""}`
+  }, [media, el("h3", { text: item.title }), item.credit && el("p", { class: "card-credit", text: item.credit })]);
 
   card.addEventListener("click", () => openModal(item, card));
   return card;

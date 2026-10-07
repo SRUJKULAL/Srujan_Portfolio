@@ -549,6 +549,13 @@ a {
   width: calc(var(--tall-h) * 9 / 16);
 }
 
+.card-credit {
+  margin: 3px 0 0;
+  font-size: 0.78rem;
+  text-align: center;
+  color: var(--muted);
+}
+
 .video-card.wide h3 {
   width: var(--wide-w);
 }
