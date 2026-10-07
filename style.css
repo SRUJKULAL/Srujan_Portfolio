@@ -654,7 +654,8 @@ a {
   color: var(--gold);
 }
 
-#videoContainer iframe {
+#videoContainer iframe,
+#videoContainer video {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -662,7 +663,8 @@ a {
   border-radius: 12px;
 }
 
-.modal-content.portrait #videoContainer iframe {
+.modal-content.portrait #videoContainer iframe,
+.modal-content.portrait #videoContainer video {
   aspect-ratio: 9 / 16;
 }
 
