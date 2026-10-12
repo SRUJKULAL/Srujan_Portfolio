@@ -69,6 +69,19 @@ a {
   color: var(--gold);
 }
 
+button.btn {
+  font-family: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  fill: currentColor;
+}
+
 /* HERO */
 
 .hero {
@@ -174,7 +187,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   margin: 32px 0 30px;
 }
 

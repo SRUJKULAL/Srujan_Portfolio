@@ -298,6 +298,13 @@ function closeModal() {
 }
 
 closeBtn.addEventListener("click", closeModal);
+
+const showreelBtn = document.getElementById("showreelBtn");
+showreelBtn.addEventListener("click", () => openModal({
+  title: "Showreel",
+  video: "assets/video/showreel.mp4",
+  thumb: "assets/thumbnails/showreel.webp"
+}, showreelBtn));
 modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !modal.hidden) closeModal(); });
 
