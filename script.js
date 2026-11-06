@@ -19,7 +19,6 @@ const WORK = {
 
   ads: [
     { title: "Jewellery Brand Ad Film – Kannada", shape: "tall", youtube: "U4m3RtI5hh0", portrait: true, tag: "Ad Film", thumb: "assets/thumbnails/jewellery-ad-kannada.webp" },
-    { title: "Jewellery Brand Ad Film – English", shape: "tall", youtube: "ujPWHrco5sQ", portrait: true, tag: "Ad Film", thumb: "assets/thumbnails/jewellery-ad-english.webp" },
     { title: "Pet Brand Promo Film",               shape: "tall", youtube: "tPUzfgYFuFQ", portrait: true, tag: "Brand Promo", thumb: "assets/thumbnails/pet-brand-promo.webp" },
     { title: "Brand Awareness Film – Power Services",    shape: "tall", youtube: "BK1_LqFouN4", portrait: true, tag: "Brand Awareness", thumb: "assets/thumbnails/power-services-awareness.webp" },
     { title: "Brand Awareness Film – Power Services 02", shape: "tall", youtube: "q7OGUdOkU0E", portrait: true, tag: "Brand Awareness", thumb: "assets/thumbnails/power-services-awareness-02.webp" },
