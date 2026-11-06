@@ -18,29 +18,29 @@ const DRIVE_MORE = "https://drive.google.com/drive/folders/1ZRE2_v_KeEJZPHe1dDRb
 const WORK = {
 
   ads: [
+    { title: "Orthopedic Brand Ad",    shape: "tall", youtube: "ZhJrXDuJHRg", portrait: true, thumb: "assets/thumbnails/aapson-ad-01.webp" },
+    { title: "Orthopedic Brand Ad 02", shape: "tall", youtube: "xCy9uix_vGU", portrait: true, thumb: "assets/thumbnails/aapson-ad-02.webp" },
     { title: "Jewellery Brand Ad Film – Kannada", shape: "tall", youtube: "U4m3RtI5hh0", portrait: true, tag: "Ad Film", thumb: "assets/thumbnails/jewellery-ad-kannada.webp" },
-    { title: "Pet Brand Promo Film",               shape: "tall", youtube: "tPUzfgYFuFQ", portrait: true, tag: "Brand Promo", thumb: "assets/thumbnails/pet-brand-promo.webp" },
+    { title: "Beauty Brand Ad",        shape: "tall", youtube: "gTLRYoeX6Io", portrait: true, thumb: "assets/thumbnails/twam-ad.webp" },
+    { title: "Skincare Brand Ad",      shape: "tall", youtube: "COmKbkeHtrw", portrait: true, thumb: "assets/thumbnails/skincare-ad.webp" },
     { title: "Brand Awareness Film – Power Services",    shape: "tall", youtube: "BK1_LqFouN4", portrait: true, tag: "Brand Awareness", thumb: "assets/thumbnails/power-services-awareness.webp" },
     { title: "Brand Awareness Film – Power Services 02", shape: "tall", youtube: "q7OGUdOkU0E", portrait: true, tag: "Brand Awareness", thumb: "assets/thumbnails/power-services-awareness-02.webp" },
-    { title: "Orthopedic Brand Ad",    shape: "tall", youtube: "ZhJrXDuJHRg", portrait: true, thumb: "assets/thumbnails/aapson-ad-01.webp" },
-    { title: "Beauty Brand Ad",        shape: "tall", youtube: "gTLRYoeX6Io", portrait: true, thumb: "assets/thumbnails/twam-ad.webp" },
-    { title: "Orthopedic Brand Ad 02", shape: "tall", youtube: "xCy9uix_vGU", portrait: true, thumb: "assets/thumbnails/aapson-ad-02.webp" },
     { title: "Education Institute Ad", shape: "tall", youtube: "4MD74iupZss", portrait: true, thumb: "assets/thumbnails/accountable-institute-01.webp" },
-    { title: "Skincare Brand Ad",      shape: "tall", youtube: "COmKbkeHtrw", portrait: true, thumb: "assets/thumbnails/skincare-ad.webp" },
+    { title: "Pet Brand Promo Film",               shape: "tall", youtube: "tPUzfgYFuFQ", portrait: true, tag: "Brand Promo", thumb: "assets/thumbnails/pet-brand-promo.webp" },
     { title: "Food & Catering Ad",     shape: "tall", youtube: "Cn7dylZmSr8", portrait: true, thumb: "assets/thumbnails/friends-caterers-ad.webp" },
     { more: "More Edits", shape: "tall", href: DRIVE_MORE }
   ],
 
   motion: [
+    { title: "3D Wedding Envelope Animation",    shape: "tall", youtube: "12pw4gR33Fs", portrait: true, tag: "3D · Blender", thumb: "assets/thumbnails/envelope-3d.webp" },
+    { title: "Wedding Invite Product Promo",     shape: "tall", youtube: "rB-D8zLevVU", portrait: true, tag: "Motion", thumb: "assets/thumbnails/wedding-invite-promo.webp" },
     { title: "App/Service Product Explainer – Landscaping", shape: "tall", youtube: "Z7ZSArILT6M", portrait: true, tag: "Motion · Product Explainer", thumb: "assets/thumbnails/product-explainer-landscaping.webp", light: true },
     { title: "App/Service Product Explainer – Roofing",     shape: "tall", youtube: "16ZSuefypr0", portrait: true, tag: "Motion · Product Explainer", thumb: "assets/thumbnails/product-explainer-roofing.webp", light: true },
-    { title: "3D Wedding Envelope Animation",    shape: "tall", youtube: "12pw4gR33Fs", portrait: true, tag: "3D · Blender", thumb: "assets/thumbnails/envelope-3d.webp" },
-    { title: "3D Retail Display Rack Render",    shape: "tall", image: "assets/thumbnails/retail-rack-3d-full.webp", tag: "3D · Blender", thumb: "assets/thumbnails/retail-rack-3d.webp", light: true },
+    { title: "SaaS Product Explainer",           shape: "tall", youtube: "yWb1O6ejut4", portrait: true, tag: "Motion", thumb: "assets/thumbnails/saas-explainer.webp" },
     { title: "Ajjer – Short Film Motion Poster", shape: "tall", video: "assets/video/ajjer-motion-poster.mp4", portrait: true, tag: "Motion · Sound Design", credit: "Directed by Pradeep Naik", thumb: "assets/thumbnails/ajjer-motion-poster.webp" },
     { title: "Ajjer – Motion Poster 2",          shape: "tall", video: "assets/video/ajjer-motion-poster-2.mp4", portrait: true, tag: "Motion · Sound Design", credit: "Directed by Pradeep Naik", thumb: "assets/thumbnails/ajjer-motion-poster-2.webp" },
+    { title: "3D Retail Display Rack Render",    shape: "tall", image: "assets/thumbnails/retail-rack-3d-full.webp", tag: "3D · Blender", thumb: "assets/thumbnails/retail-rack-3d.webp", light: true },
     { title: "Karnataka Rajyotsava Motion Poster", shape: "tall", youtube: "s5-ASbnxWd4", portrait: true, tag: "Motion · Festive Wish", thumb: "assets/thumbnails/rajyotsava-motion-poster.webp" },
-    { title: "Wedding Invite Product Promo",     shape: "tall", youtube: "rB-D8zLevVU", portrait: true, tag: "Motion", thumb: "assets/thumbnails/wedding-invite-promo.webp" },
-    { title: "SaaS Product Explainer",           shape: "tall", youtube: "yWb1O6ejut4", portrait: true, tag: "Motion", thumb: "assets/thumbnails/saas-explainer.webp" },
     { title: "Education Explainer Reel",         shape: "tall", youtube: "4_PDqbUO6xk", portrait: true, tag: "Motion", thumb: "assets/thumbnails/education-explainer.webp" },
     { title: "Jewellery Brand Educational Reel", shape: "tall", youtube: "X3LkLqSz47s", portrait: true, tag: "Motion", thumb: "assets/thumbnails/jewellery-educational.webp" },
     { title: "Interior Design Lead-Gen Reel",    shape: "tall", youtube: "WgogRhhssa8", portrait: true, tag: "Motion", thumb: "assets/thumbnails/interior-leadgen.webp" },
@@ -48,8 +48,8 @@ const WORK = {
   ],
 
   cinematic: [
-    { title: "Café Cinematic Brand Film", shape: "tall", youtube: "ELeOm0fbGRk", portrait: true, tag: "Cinematic · Sound Design", thumb: "assets/thumbnails/cafe-cinematic-film.webp" },
     { title: "Kambala Highlights", shape: "wide", youtube: "lPjhXQBf6wg", thumb: "assets/thumbnails/kambala.webp" },
+    { title: "Café Cinematic Brand Film", shape: "tall", youtube: "ELeOm0fbGRk", portrait: true, tag: "Cinematic · Sound Design", thumb: "assets/thumbnails/cafe-cinematic-film.webp" },
     { title: "Wedding Highlights", shape: "wide", vimeo: "1151887511",   thumb: "assets/thumbnails/video2.webp" },
     { title: "Event Highlights",   shape: "wide", vimeo: "1151793986",   thumb: "assets/thumbnails/video1.webp" },
     { title: "Pooja Highlights",   shape: "wide", youtube: "so8PqWt3xgo", thumb: "assets/thumbnails/pooja.webp" },
