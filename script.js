@@ -18,7 +18,7 @@ const DRIVE_MORE = "https://drive.google.com/drive/folders/1ZRE2_v_KeEJZPHe1dDRb
 const WORK = {
 
   ads: [
-    { title: "Inside Prestige Avalon Park – Home Tour", shape: "tall", youtube: "dO5rz4uvdnc", portrait: true, tag: "Ad Film · Real Estate", thumb: "assets/thumbnails/prestige-avalon-park.webp" },
+    { title: "Dholera Plot Explainer Reel", shape: "tall", youtube: "JvH1Sl6UNK4", portrait: true, tag: "Ad Film · Real Estate", thumb: "assets/thumbnails/dholera-plot-reel.webp" },
     { title: "Jewellery Brand Ad Film – Kannada", shape: "tall", youtube: "U4m3RtI5hh0", portrait: true, tag: "Ad Film", thumb: "assets/thumbnails/jewellery-ad-kannada.webp" },
     { title: "Brand Awareness Film – Power Services",    shape: "tall", youtube: "BK1_LqFouN4", portrait: true, tag: "Brand Awareness", thumb: "assets/thumbnails/power-services-awareness.webp" },
     { title: "Pet Brand Promo Film",               shape: "tall", youtube: "tPUzfgYFuFQ", portrait: true, tag: "Brand Promo", thumb: "assets/thumbnails/pet-brand-promo.webp" },
@@ -50,6 +50,7 @@ const WORK = {
 
   cinematic: [
     { title: "A Room With This View – Ladakh Stay Film", shape: "tall", youtube: "LCFbVaywdAA", portrait: true, tag: "Cinematic · Hospitality", thumb: "assets/thumbnails/ladakh-stay-film.webp" },
+    { title: "Inside Prestige Avalon Park – Home Tour", shape: "tall", youtube: "dO5rz4uvdnc", portrait: true, tag: "Cinematic · Real Estate", thumb: "assets/thumbnails/prestige-avalon-park.webp" },
     { title: "Café Cinematic Brand Film", shape: "tall", youtube: "ELeOm0fbGRk", portrait: true, tag: "Cinematic · Sound Design", thumb: "assets/thumbnails/cafe-cinematic-film.webp" },
     { title: "Kambala Highlights", shape: "wide", youtube: "lPjhXQBf6wg", tag: "Cinematic · Sports", thumb: "assets/thumbnails/kambala.webp" },
     { title: "Wedding Highlights", shape: "wide", vimeo: "1151887511",   tag: "Cinematic · Wedding", thumb: "assets/thumbnails/video2.webp" },
@@ -60,7 +61,6 @@ const WORK = {
   ],
 
   social: [
-    { title: "Dholera Plot Explainer Reel", shape: "tall", youtube: "JvH1Sl6UNK4", portrait: true, tag: "Social · Real Estate", thumb: "assets/thumbnails/dholera-plot-reel.webp" },
     { title: "Fast Cut Edit",        shape: "tall", vimeo: "1151797279",   tag: "Social · Fast Cut", thumb: "assets/thumbnails/video3.webp" },
     { title: "YouTube Long Form",    shape: "tall", youtube: "vvrLCvXiBUE", tag: "YouTube · Long Form", thumb: "assets/thumbnails/video4.webp" },
     { title: "YouTube Short",        shape: "tall", youtube: "RBfPjq5NYC8", tag: "YouTube · Short", thumb: "assets/thumbnails/video5.webp" },
