@@ -21,6 +21,7 @@ const WORK = {
     { title: "Dholera Plot Explainer Reel", shape: "tall", youtube: "JvH1Sl6UNK4", portrait: true, tag: "Ad Film · Real Estate", thumb: "assets/thumbnails/dholera-plot-reel.webp" },
     { title: "Jewellery Brand Ad Film – Kannada", shape: "tall", youtube: "U4m3RtI5hh0", portrait: true, tag: "Ad Film", thumb: "assets/thumbnails/jewellery-ad-kannada.webp" },
     { title: "Brand Awareness Film – Power Services",    shape: "tall", youtube: "BK1_LqFouN4", portrait: true, tag: "Brand Awareness", thumb: "assets/thumbnails/power-services-awareness.webp" },
+    { title: "4BHK Builder Floor Tour – Faridabad", shape: "tall", youtube: "gDsc2UPXSzI", portrait: true, tag: "Ad Film · Real Estate", thumb: "assets/thumbnails/faridabad-builder-floor.webp" },
     { title: "Pet Brand Promo Film",               shape: "tall", youtube: "tPUzfgYFuFQ", portrait: true, tag: "Brand Promo", thumb: "assets/thumbnails/pet-brand-promo.webp" },
     { title: "Orthopedic Brand Ad",    shape: "tall", youtube: "ZhJrXDuJHRg", portrait: true, tag: "Ad Film", thumb: "assets/thumbnails/aapson-ad-01.webp" },
     { title: "Brand Awareness Film – Power Services 02", shape: "tall", youtube: "q7OGUdOkU0E", portrait: true, tag: "Brand Awareness", thumb: "assets/thumbnails/power-services-awareness-02.webp" },
