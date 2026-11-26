@@ -19,6 +19,7 @@ const WORK = {
 
   ads: [
     { title: "Dholera Plot Explainer Reel", shape: "tall", youtube: "JvH1Sl6UNK4", portrait: true, tag: "Ad Film · Real Estate", thumb: "assets/thumbnails/dholera-plot-reel.webp" },
+    { title: "Sweet, Smoke & Fire – Restaurant Promo Reel", shape: "tall", youtube: "HOGMDcSJau0", portrait: true, tag: "Cinematic · Sound Design", thumb: "assets/thumbnails/sweet-smoke-fire-restaurant.webp" },
     { title: "Jewellery Brand Ad Film – Kannada", shape: "tall", youtube: "U4m3RtI5hh0", portrait: true, tag: "Ad Film", thumb: "assets/thumbnails/jewellery-ad-kannada.webp" },
     { title: "Brand Awareness Film – Power Services",    shape: "tall", youtube: "BK1_LqFouN4", portrait: true, tag: "Brand Awareness", thumb: "assets/thumbnails/power-services-awareness.webp" },
     { title: "4BHK Builder Floor Tour – Faridabad", shape: "tall", youtube: "gDsc2UPXSzI", portrait: true, tag: "Ad Film · Real Estate", thumb: "assets/thumbnails/faridabad-builder-floor.webp" },
@@ -51,7 +52,6 @@ const WORK = {
 
   cinematic: [
     { title: "Fire & Feast – Steakhouse Promo Reel", shape: "tall", youtube: "L9MfJEmvn9w", portrait: true, tag: "Cinematic · Sound Design", thumb: "assets/thumbnails/fire-and-feast-steakhouse.webp" },
-    { title: "Sweet, Smoke & Fire – Restaurant Promo Reel", shape: "tall", youtube: "HOGMDcSJau0", portrait: true, tag: "Cinematic · Sound Design", thumb: "assets/thumbnails/sweet-smoke-fire-restaurant.webp" },
     { title: "A Room With This View – Ladakh Stay Film", shape: "tall", youtube: "LCFbVaywdAA", portrait: true, tag: "Cinematic · Hospitality", thumb: "assets/thumbnails/ladakh-stay-film.webp" },
     { title: "Inside Prestige Avalon Park – Home Tour", shape: "tall", youtube: "dO5rz4uvdnc", portrait: true, tag: "Cinematic · Real Estate", thumb: "assets/thumbnails/prestige-avalon-park.webp" },
     { title: "Café Cinematic Brand Film", shape: "tall", youtube: "ELeOm0fbGRk", portrait: true, tag: "Cinematic · Sound Design", thumb: "assets/thumbnails/cafe-cinematic-film.webp" },
