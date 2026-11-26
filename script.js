@@ -21,7 +21,7 @@ const FEATURED = [
   "Fire & Feast – Steakhouse Promo Reel",
   "Dholera Plot Explainer Reel",
   "Ajjer – Short Film Motion Poster",
-  "Jewellery Brand Ad Film – Kannada",
+  "Jewellery Brand Educational Reel",
   "Sweet, Smoke & Fire – Restaurant Promo Reel",
   "App/Service Product Explainer – Landscaping",
   "Brand Awareness Film – Power Services",
