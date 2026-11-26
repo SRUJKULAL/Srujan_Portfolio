@@ -15,11 +15,25 @@
 
 const DRIVE_MORE = "https://drive.google.com/drive/folders/1ZRE2_v_KeEJZPHe1dDRby61h2jbglBjo?usp=sharing";
 
+/* FEATURED: the best pieces from every category, shown first on the page.
+   List card titles exactly as they appear in WORK below; order = display order. */
+const FEATURED = [
+  "Fire & Feast – Steakhouse Promo Reel",
+  "Dholera Plot Explainer Reel",
+  "Ajjer – Short Film Motion Poster",
+  "Jewellery Brand Ad Film – Kannada",
+  "Sweet, Smoke & Fire – Restaurant Promo Reel",
+  "App/Service Product Explainer – Landscaping",
+  "Brand Awareness Film – Power Services",
+  "A Room With This View – Ladakh Stay Film",
+  "3D Wedding Envelope Animation",
+  "4BHK Builder Floor Tour – Faridabad"
+];
+
 const WORK = {
 
   ads: [
     { title: "Dholera Plot Explainer Reel", shape: "tall", youtube: "JvH1Sl6UNK4", portrait: true, tag: "Ad Film · Real Estate", thumb: "assets/thumbnails/dholera-plot-reel.webp" },
-    { title: "Sweet, Smoke & Fire – Restaurant Promo Reel", shape: "tall", youtube: "HOGMDcSJau0", portrait: true, tag: "Cinematic · Sound Design", thumb: "assets/thumbnails/sweet-smoke-fire-restaurant.webp" },
     { title: "Jewellery Brand Ad Film – Kannada", shape: "tall", youtube: "U4m3RtI5hh0", portrait: true, tag: "Ad Film", thumb: "assets/thumbnails/jewellery-ad-kannada.webp" },
     { title: "Brand Awareness Film – Power Services",    shape: "tall", youtube: "BK1_LqFouN4", portrait: true, tag: "Brand Awareness", thumb: "assets/thumbnails/power-services-awareness.webp" },
     { title: "4BHK Builder Floor Tour – Faridabad", shape: "tall", youtube: "gDsc2UPXSzI", portrait: true, tag: "Ad Film · Real Estate", thumb: "assets/thumbnails/faridabad-builder-floor.webp" },
@@ -52,6 +66,7 @@ const WORK = {
 
   cinematic: [
     { title: "Fire & Feast – Steakhouse Promo Reel", shape: "tall", youtube: "L9MfJEmvn9w", portrait: true, tag: "Cinematic · Sound Design", thumb: "assets/thumbnails/fire-and-feast-steakhouse.webp" },
+    { title: "Sweet, Smoke & Fire – Restaurant Promo Reel", shape: "tall", youtube: "HOGMDcSJau0", portrait: true, tag: "Cinematic · Sound Design", thumb: "assets/thumbnails/sweet-smoke-fire-restaurant.webp" },
     { title: "A Room With This View – Ladakh Stay Film", shape: "tall", youtube: "LCFbVaywdAA", portrait: true, tag: "Cinematic · Hospitality", thumb: "assets/thumbnails/ladakh-stay-film.webp" },
     { title: "Inside Prestige Avalon Park – Home Tour", shape: "tall", youtube: "dO5rz4uvdnc", portrait: true, tag: "Cinematic · Real Estate", thumb: "assets/thumbnails/prestige-avalon-park.webp" },
     { title: "Café Cinematic Brand Film", shape: "tall", youtube: "ELeOm0fbGRk", portrait: true, tag: "Cinematic · Sound Design", thumb: "assets/thumbnails/cafe-cinematic-film.webp" },
@@ -231,6 +246,11 @@ function autoScroll(wrapper, row) {
   }, { passive: true });
 }
 
+const allWork = Object.values(WORK).flat();
+WORK.featured = FEATURED
+  .map(title => allWork.find(item => item.title === title))
+  .filter(Boolean);
+
 document.querySelectorAll("[data-row]").forEach(wrapper => {
   const items = WORK[wrapper.dataset.row];
   if (items) buildRow(wrapper, items);
@@ -246,7 +266,7 @@ document.querySelectorAll("[data-row]").forEach(wrapper => {
 const heroBg = document.getElementById("heroBg");
 
 if (heroBg) {
-  const thumbs = Object.values(WORK).flat()
+  const thumbs = allWork
     .filter(item => item.thumb && !item.light && !item.thumb.startsWith("http"))
     .map(item => item.thumb);
 
